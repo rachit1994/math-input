@@ -9,12 +9,15 @@ export default class Mathquill extends React.Component {
         this.MQ = MathQuill.getInterface(2);
 		this.a="";
     }
-	print(n){
+	print(n,k){
 		this.a = this.a+n;
     var mathFieldSpan = $('#math');
 var mathField = this.MQ.MathField(mathFieldSpan[0]);
 mathFieldSpan.appendTo(document.body);
-mathField.cmd(n);
+if(k=="k"){
+  mathField.keystroke(n);
+}
+else mathField.cmd(n);
 		console.log("n",n);
 	}
     componentDidMount() {

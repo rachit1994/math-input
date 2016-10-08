@@ -18,26 +18,61 @@ html,body{
 }
 
 .keyboard ul.container {
+	display: inline-block;
+	float: right;
+	height: 100%;
+	  margin: 0;
+  padding: 0;
+}
+.keyboard ul#numbers {
   flex-direction: row;
   flex-wrap:wrap;
+  float: left;
   display: flex;
   align-items:stretch;
   height: 100%;
   margin: 0;
   padding: 0;
+  background: #eee;
   text-align: center;
 }
 
-.keyboard ul.container li{
-	width: 20%;
+.keyboard ul#numbers li{
+	width: 33%;
 	padding: 20px;
 	height: 25%;
 	list-style: none;
 	background: #eee;
-	border: solid 1px black;
+	cursor: pointer;
+}
+.keyboard ul.container li{
+	list-style: none;
+	text-align: center;
+	font-size: 20px;
+	height: 100%;
+	padding: 20px;
 	cursor: pointer;
 }
 .keyboard ul.container li:active{
 	background: #9CCC65;
 	color: #fff;
+}
+#numbers{
+	width: 60%;
+}
+#arthmetic{
+	width: 20%;
+	background: green;
+	color: #fff;
+}
+#trigno{
+	width: 20%;
+	background: #000;
+	color: #fff;
+}
+
+#math{
+	float: right;
+	font-size: 100px;
+	border: none !important;
 }
